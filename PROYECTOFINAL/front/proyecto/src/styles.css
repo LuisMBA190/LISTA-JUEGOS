@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-image: url('assets/images/mario22.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.titulo {
+    font-size: 1.8rem;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+}

@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">CREAR JUEGO</span>
+                    <form class="mt-3" [formGroup]="juegoForm" (ngSubmit)="agregarJuego()">
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="nombre" class="form-control form-control-lg" placeholder="Juego">
+                            <div class="text-danger" *ngIf="juegoForm.get('nombre')?.hasError('required') && juegoForm.get('nombre')?.touched">
+                                <span>El nombre del juego es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="genero" class="form-control form-control-lg" placeholder="Género">
+                            <div class="text-danger" *ngIf="juegoForm.get('genero')?.hasError('required') && juegoForm.get('genero')?.touched">
+                                <span>El género es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="director" class="form-control form-control-lg" placeholder="Plataforma">
+                            <div class="text-danger" *ngIf="juegoForm.get('director')?.hasError('required') && juegoForm.get('director')?.touched">
+                                <span>El director es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" formControlName="anio" class="form-control form-control-lg" placeholder="Año">
+                            <div class="text-danger" *ngIf="juegoForm.get('anio')?.hasError('required') && juegoForm.get('anio')?.touched">
+                                <span>El año es obligatorio</span>
+                            </div>
+                        </div>
+                        <button routerLink="/" class="btn btn-secondary btn-lg float-start">Volver</button>
+                        <button type="submit" [disabled]="juegoForm.invalid" class="btn btn-success btn-lg float-end">Aceptar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
